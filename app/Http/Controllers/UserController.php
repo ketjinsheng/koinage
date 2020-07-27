@@ -28,4 +28,8 @@ class UserController extends Controller
     public function setting() {
         return view('setting');
     }
+
+    public function profile() {
+        return view('profile');
+    }
 }

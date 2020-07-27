@@ -38,6 +38,7 @@ Route::get('/withdraw','WithdrawController@index');
 Route::get('/deposit','DepositController@index');
 Route::get('/network','NetworkController@index');
 Route::get('/setting','UserController@setting');
+Route::get('/profile','UserController@profile');
 
 Route::get('verify/resend', 'Auth\TwoFactorController@resend')->name('verify.resend');
 Route::resource('verify', 'Auth\TwoFactorController')->only(['index', 'store']);
