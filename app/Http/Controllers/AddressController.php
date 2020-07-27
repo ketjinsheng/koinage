@@ -82,6 +82,5 @@ class AddressController extends Controller
         ]);
         
         $response = json_decode($res->getBody(),true);
-        dd($response);
     }
 }
