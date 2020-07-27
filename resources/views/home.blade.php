@@ -11,13 +11,46 @@
                 }
             @endphp
             <h4>Balance: {{$x}}</h4>
-            <button style="font-size:18px"><i class="fa fa-plus"> Add Coin</i></button>
+            <button data-toggle="modal" data-target="#add_coin" style="font-size:18px"><i class="fa fa-plus"> Add Coin</i></button>
             @foreach ($coinBalance as $coin)
                 <div class="row">    
                     <div class="col-8" style="font-size:23px;"><a href="/{{$coin['coin_id']}}/address">{{$coin['symbol']}}</div></a>
                     <div class="col-4" style="font-size:23px;">{{$coin['balance']}}</div>
-                </div class="row">
+                </div>
             @endforeach
+        </div>
+    </div>
+</div>
+
+<!--Add Coin-->
+<div class="modal fade" id="add_coin" tabindex="-1" role="dialog" aria-labelledby="withdrawLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="formLabel">Add Coin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/addcoin" method="POST">
+                    <div class="form-group">
+                        <label for="coin">Coin</label>
+                        @php $coins=\App\Coin::all(); @endphp
+                        <select class="form-control" id="add_coin" name="coin_id"
+                            aria-describedby="coin_id">
+                            @foreach($coins as $coin)
+                            <option value="{{$coin->id}}">{{$coin->symbol}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-danger m-1" data-dismiss="modal">Close</button>
+                        <button type="submit" id="submitBtn" class="btn btn-success stdbtn float-right m-1">{{__('Add')}}</button>
+                    </div>
+                    @csrf
+                </form>
+            </div>
         </div>
     </div>
 </div>
