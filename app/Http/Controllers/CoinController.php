@@ -27,12 +27,12 @@ class CoinController extends Controller
     }
 
     public function add(Request $request){
-        $coin=new Coin;
-        $coin->symbol=$request->symbol;
-        $coin->network_id=$request->network_id;
-        $coin->decimal=$request->decimal;
-        $coin->smart_contract=$request->smart_contract;
-        $coin->save();
+        // $coin=new Coin;
+        // $coin->symbol=$request->symbol;
+        // $coin->network_id=$request->network_id;
+        // $coin->decimal=$request->decimal;
+        // $coin->smart_contract=$request->smart_contract;
+        // $coin->save();
 
         return back();
     }
