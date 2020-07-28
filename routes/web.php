@@ -21,8 +21,8 @@ Auth::routes();
 
 Route::get('/user', 'UserController@index');
 Route::get('/{coin_id}/address', 'AddressController@index');
-Route::get('/{coin_id}/deposit_history','AddressController@deposit_history');
-Route::get('/{coin_id}/withdraw_history','AddressController@withdraw_history');
+Route::get('/{coin_id}/history','AddressController@history');
+
 Route::get('/withdraw/{address}','AddressController@address_withdraw');
 Route::post('/withdraw','AddressController@withdraw');
 Route::get('/{coin_id}/receive','AddressController@receive');

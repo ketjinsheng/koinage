@@ -56,12 +56,3 @@
 </div>
 
 @endsection
-{{-- <h5>BTC:</h5>
-            <button type="button" class="btn btn-primary float-left">Withdraw</button>
-            <button type="button" class="btn btn-success float-left ml-2">Receive</button>
-            <button type="button" class="btn btn-info float-left ml-2">Deposit History</button>
-            <button type="button" class="btn btn-secondary float-left ml-2">Withdraw History</button>
-        </div>
-        <div class="col-md-8 mt-4">
-            <h5>Child Address</h5>
-        </div> --}}

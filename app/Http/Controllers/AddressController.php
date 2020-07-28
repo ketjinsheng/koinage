@@ -7,8 +7,6 @@ use App\Address;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
-use App\Http\Resources\Address as AddressResource;
 
 class AddressController extends Controller
 {
@@ -48,14 +46,9 @@ class AddressController extends Controller
         
     }
 
-    public function deposit_history(Request $request) {
+    public function history(Request $request) {
         $coin_id = $request->coin_id;
-        return view('deposit_history')->with('coin_id',$coin_id);
-    }
-
-    public function withdraw_history(Request $request) {
-        $coin_id = $request->coin_id;
-        return view('withdraw_history')->with('coin_id',$coin_id);
+        return view('history')->with('coin_id',$coin_id);
     }
 
     public function receive(Request $request) {
@@ -82,5 +75,6 @@ class AddressController extends Controller
         ]);
         
         $response = json_decode($res->getBody(),true);
+        dd(Auth::id());
     }
 }

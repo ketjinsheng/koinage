@@ -12,20 +12,42 @@
             <div style="height:50px">
                 <button type="button" data-toggle="modal" data-target="#withdraw" class="btn btn-primary float-left">Withdraw</button>
                 <a href="/{{$coin_id}}/receive"><button type="button" class="btn btn-success float-left ml-2">Receive</button></a>
-                <a href="/{{$coin_id}}/deposit_history"><button type="button" class="btn btn-info float-left ml-2">Deposit History</button></a>
-                <a href="/{{$coin_id}}/withdraw_history"><button type="button" class="btn btn-secondary float-left ml-2">Withdraw History</button></a>
+                <a href="/{{$coin_id}}/history"><button type="button" class="btn btn-info float-left ml-2">History</button></a>
             </div>
-            <h4>Child Address</h4>
-            <div class="row">
-                @foreach ($addresses as $address) 
-                <div class="col-8">
-                    <div style="font-size:18px;">{{$address->address}}: {{$address->wallet->balance??0}}  Coin : {{$address->wallet->coin->symbol??'NA'}}</div>
-                </div>
-                <div class="col-4">
-                    <a href="/withdraw/{{$address->address}}"><button class="btn btn-success">Withdraw</button></a>
-                </div>
+            <h4>Coin: {{$addresses->first()->wallet->coin->symbol}}</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Child Address</th>
+                        <th>User</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                @foreach ($addresses as $address)
+                    @if ($address->label != 0)
+                        <tbody>
+                            <tr>
+                                <td>{{$address->address}}</td>
+                                <td></td>
+                                <td>{{$address->wallet->balance??0}}</td>
+                                <td><a href="/withdraw/{{$address->address}}"><button class="btn btn-success">Withdraw</button></a></td>
+                            </tr>
+                        </tbody>
+                    @endif
                 @endforeach
-            </div>
+            </table>
+            {{-- <div class="row">
+                @foreach ($addresses as $address)
+                    @if ($address->label != 0)
+                        <div class="col-8">
+                            <div style="font-size:18px;">{{$address->address}}: {{$address->wallet->balance??0}}  Coin : {{$address->wallet->coin->symbol??'NA'}}</div>
+                        </div>
+                        <div class="col-4">
+                            <a href="/withdraw/{{$address->address}}"><button class="btn btn-success">Withdraw</button></a>
+                        </div>
+                    @endif
+                @endforeach
+            </div> --}}
         </div>
     </div>
 </div>
