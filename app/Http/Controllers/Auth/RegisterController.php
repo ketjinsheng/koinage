@@ -70,7 +70,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'trading_pin' => $data['trading_pin'],
-            'api_key'=>md5(uniqid())
+            // 'api_key'=>md5(uniqid())
         ]);
     }
 }

@@ -4,10 +4,13 @@
 <div class="float-left">
     <a href="/{{$coin_id}}/address"><button class="btn btn-primary">Back</button></a>
 </div>
-<div class="float-left">
-    Withdraw
-</div>
-<div class="float-left">
-    History
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Withdraw</th>
+            <th>History</th>
+        </tr>
+    </thead>
+</table>
+
 @endsection

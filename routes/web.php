@@ -23,10 +23,10 @@ Route::get('/user', 'UserController@index');
 Route::get('/{coin_id}/address', 'AddressController@index');
 Route::get('/{coin_id}/history','AddressController@history');
 
-Route::get('/withdraw/{address}','AddressController@address_withdraw');
+Route::get('/withdraw/{address}/{coin_id}','AddressController@address_withdraw');
 Route::post('/withdraw','AddressController@withdraw');
-Route::get('/{coin_id}/receive','AddressController@receive');
-Route::get('/create_address','AddressController@create_address');
+Route::get('/{coin_id}/withdraw/{address}','AddressController@withdrawal');
+Route::get('/{coin_id}/receive/{address}','AddressController@receive');
 Route::get('/coin', 'CoinController@index');
 Route::post('/addcoin', 'CoinController@add');
 Route::get('/wallet', 'WalletController@index');
