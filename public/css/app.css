@@ -530,6 +530,22 @@ div {
   justify-content: center;
 }
 
+.container-wallet-market .main .market .table .dropdown {
+  border: 1px solid red;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.container-wallet-market .main .market .table .dropdown .dropbtn {
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+.container-wallet-market .main .market .table .dropdown .dropbtn .dropdown-content {
+  position: absolute;
+}
+
 .container-wallet-receivedeposit {
   height: 100%;
   width: calc(100% - 2px);
