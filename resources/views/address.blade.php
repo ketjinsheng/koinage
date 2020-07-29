@@ -11,7 +11,7 @@
         <div class="col-md-8">
             <div style="height:50px">
                 <button type="button" data-toggle="modal" data-target="#withdraw" class="btn btn-primary float-left">Withdraw</button>
-                <a href="/receive"><button type="button" class="btn btn-success float-left ml-2">Receive</button></a>
+                <a href="/{{$coin_id}}/receive"><button type="button" class="btn btn-success float-left ml-2">Receive</button></a>
                 <a href="/{{$coin_id}}/deposit_history"><button type="button" class="btn btn-info float-left ml-2">Deposit History</button></a>
                 <a href="/{{$coin_id}}/withdraw_history"><button type="button" class="btn btn-secondary float-left ml-2">Withdraw History</button></a>
             </div>
