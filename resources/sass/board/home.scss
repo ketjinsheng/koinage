@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $borderred: 1px solid red;
 
 .container-home {
@@ -5,6 +6,14 @@ $borderred: 1px solid red;
     height: 100%;
     // width: calc(100% - 2px);
     width: 100%;
+=======
+$borderred: 0px solid red;
+
+.container-home {
+    background-image: url("/image/export/backgroundhome.png");
+    height: 100%;
+    width: calc(100% - 2px);
+>>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367
     border: $borderred;
     display: flex;
     flex-direction: column;
@@ -14,7 +23,11 @@ $borderred: 1px solid red;
         height: 15%;
         display: flex;
         padding: 0 75px;
+<<<<<<< HEAD
         border-bottom: 1px solid #FFFFFF;
+=======
+        border-bottom: 1px solid #ffffff;
+>>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367
         .navbar-left {
             display: flex;
             border: $borderred;
@@ -24,6 +37,7 @@ $borderred: 1px solid red;
                 width: 60%;
                 display: flex;
                 align-items: center;
+<<<<<<< HEAD
                 justify-content: center;
                 .logo-icon {
                     width: 24em;
@@ -93,3 +107,129 @@ $borderred: 1px solid red;
         width: 50%;
     }
 }
+=======
+                justify-content: flex-end;
+                .logo-icon {
+                    width: 32em;
+                }
+            }
+        }
+        .navbar-right {
+            display: flex;
+            border: $borderred;
+            width: 40%;
+
+            .language-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .language-icon {
+                    width: 12em;
+                }
+                .language-text {
+                    font-size: 20px;
+                    color: #f9fbfb;
+                    font-weight: bold;
+                }
+            }
+            .twitter-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .twitter-icon {
+                    width: 12em;
+                }
+            }
+            .facebook-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .facebook-icon {
+                    width: 12em;
+                }
+            }
+            .telegram-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .telegram-icon {
+                    width: 12em;
+                }
+            }
+            .login-box {
+                border: $borderred;
+                width: 30%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .login-text {
+                    font-size: 20px;
+                    color: #f9fbfb;
+                    font-weight: bold;
+                }
+            }
+            .register-box {
+                border: $borderred;
+                width: 30%;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                .register-text {
+                    font-size: 20px;
+                    color: #f9fbfb;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .content {
+        display: flex;
+        border: $borderred;
+        height: 100%;
+        width: 100%;
+        padding: 0 75px;
+        .halfleft-box {
+            border: $borderred;
+            width: 50%;
+            .info-box {
+                border: $borderred;
+                margin: 80px;
+                align-items: center;
+                justify-content: center;
+                .info-icon {
+                    width: 6em;
+                }
+            }
+            .download-box {
+                border: $borderred;
+                margin-left: 81px;
+                align-items: center;
+                justify-content: center;
+                .download-icon {
+                    width: 18em;
+                }
+            }
+        }
+        .halfright-box {
+            //display: flex;
+            border: $borderred;
+            width: 50%;
+            align-items: center;
+            justify-content: flex-end;
+            margin-left: 200px;
+            margin-top: 80px;
+            .phone-icon {
+                width: 25em;
+            }
+        }
+    }
+}
+>>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367

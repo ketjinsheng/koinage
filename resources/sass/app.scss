@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+// // Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// // Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    height: 100%;
+    padding: -20px;
+    // background-color: white;
+    background-image: #efefef;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+
+    height: 100%;
+    // width: 100%;
+    overflow: unset;
+    font-size: 12px;
+    min-width: -webkit-fill-available;
+    background: #efefef;
+}
+
+@import "board/email";
+@import "board/email2";
+@import "board/msell";
+@import "board/setting";
+@import "board/login";
+=======
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
@@ -8,6 +48,18 @@ div {
     box-sizing: border-box;
 }
 
+=======
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+>>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367
 .container {
     position: fixed;
     height: 100%;
@@ -16,5 +68,25 @@ div {
     font-size: 12px;
 }
 
+<<<<<<< HEAD
 @import "board/home";
 @import "board/signup";
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43
+=======
+//board
+@import "board/home";
+@import "board/home2";
+@import "board/dashboard";
+@import "board/walletmain";
+@import "board/wallet-market";
+@import "board/wallet-receivedeposit";
+@import "board/wallet-sendwithdraw";
+@import "board/wallet-buyonline";
+@import "board/wallet-buycard";
+@import "board/accountmain";
+@import "board/history";
+@import "board/logout";
+//component
+@import "component/header";
+@import "component/verticalnav";
+>>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367

@@ -1,0 +1,93 @@
+.verticalnav{
+    border: $borderred;
+    width: 25%;
+    height: 100%;
+    
+    .dashboard {
+      border: $borderred;
+      display: flex;
+      height: 7%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .dashboard-icon {
+        width: 2em;
+        
+      }
+      .dashboard-text {
+        font-size: 15px;
+        color: #515151;
+      }
+    }
+    .wallet {
+      border: $borderred;
+      display: flex;
+      height: 7%;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      .wallet-icon {
+        width: 2em;
+      }
+      .wallet-text {
+        font-size: 15px;
+        color: #515151;
+      }
+    }
+    .account {
+      border: $borderred;
+      display: flex;
+      height: 7%;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      .account-icon {
+        width: 2em;
+      }
+      .account-text {
+        font-size: 15px;
+        color: #515151;
+      }
+    }
+    .history {
+      border: $borderred;
+      display: flex;
+      height: 7%;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      .history-icon {
+        width: 2em;
+      }
+      .history-text {
+        font-size: 15px;
+        color: #515151;
+      }
+    }
+    .logout {
+      border: $borderred;
+      display: flex;
+      height: 7%;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      .logout-icon {
+        width: 2em;
+      }      
+      .logout-text {
+        font-size: 15px;
+        color: #515151;
+      }
+    }
+    .logo-box {
+      border: $borderred;
+      height: 58%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-block-end: 40px;
+      .logo-icon {
+          width: 10em;
+      }
+  }
+  }
