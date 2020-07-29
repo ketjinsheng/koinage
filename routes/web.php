@@ -13,11 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 // Auth::routes();
+<<<<<<< HEAD
+Route::livewire('email', 'board.email');
+Route::livewire('email2', 'board.email2');
+Route::livewire('msell', 'board.msell');
+Route::livewire('setting', 'board.setting');
+Route::livewire('login', 'board.login');
+
+Route::get('fake-config', 'ConfigController@config');
+
+=======
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43
 
 // Route::get('/user', 'UserController@index');
 // Route::get('/{coin_id}/address', 'AddressController@index');
@@ -36,6 +50,9 @@ Route::get('/', function () {
 // Route::get('/withdraw','WithdrawController@index');
 // Route::get('/deposit','DepositController@index');
 // Route::get('/network','NetworkController@index');
+<<<<<<< HEAD
+Route::get('/setting', 'SettingController@setting');
+=======
 // Route::get('/setting','UserController@setting');
 
 Route::livewire('home1', 'board.home');
@@ -43,10 +60,15 @@ Route::livewire('register', 'board.signup');
 Route::livewire('2fa', 'board.twofactor');
 // Route::livewire('2faVerify', 'board.twofactor');
 
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43
 
 // Route::get('verify/resend', 'Auth\TwoFactorController@resend')->name('verify.resend');
 // Route::resource('verify', 'Auth\TwoFactorController')->only(['index', 'store']);
 
 // Route::group(['middleware' => ['auth', 'twofactor']], function () {
 //     Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 // });
+=======
+// });
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43

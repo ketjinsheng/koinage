@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         // $clients = DB::table('client')->get();
         // foreach($clients as $client) {
         //     $user = new User;
@@ -21,11 +22,12 @@ class UserController extends Controller
         //     $user->save();
         // }
 
-        $user=User::all();
-        return view('user')->with('users',$user);
+        $user = User::all();
+        return view('user')->with('users', $user);
     }
 
-    public function setting() {
-        return view('setting');
-    }
+    // public function setting()
+    // {
+    //     return view('setting');
+    // }
 }

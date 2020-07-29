@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class ConfigController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         // $wallet_configs = DB::table('wallet_configure')->get();
         // foreach ($wallet_configs as $wallet_config) {
         //     $config = new Config;
@@ -23,7 +24,13 @@ class ConfigController extends Controller
         //     $config->upper_acc_threshold = $wallet_config->transfer_value;
         //     $config->save();
         // }
-        $config=Config::all();
-        return view('config')->with('configs',$config);
+        $config = Config::all();
+        return view('config')->with('configs', $config);
+    }
+
+    public function config()
+    {
+        $configs = config()::get();
+        return view('config', compact('configs'));
     }
 }

@@ -16,9 +16,9 @@ class CreateConfigsTable extends Migration
         Schema::create('configs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("user_id")->nullable();
-            $table->foreign("user_id")->references("id")->on("users");
+            // $table->foreign("user_id")->references("id")->on("users");
             $table->unsignedBigInteger("network_id")->nullable();
-            $table->foreign("network_id")->references("id")->on("networks");
+            // $table->foreign("network_id")->references("id")->on("networks");
             $table->integer("lower_acc_threshold")->nullable();
             $table->integer("upper_acc_threshold")->nullable();
             $table->integer("required_confirmation")->nullable();

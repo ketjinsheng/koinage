@@ -1,0 +1,238 @@
+$borderred: 0px solid red;
+
+.container-home2 {
+    background-image: url("/image/export/backgroundhome.png");
+    height: 100%;
+    width: calc(100% - 2px);
+    border: $borderred;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .navbar {
+        border: $borderred;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        padding: 0 75px;
+        border-bottom: 1px solid #ffffff;
+        .navbar-left {
+            display: flex;
+            border: $borderred;
+            width: 60%;
+            .logo-box {
+                border: $borderred;
+                width: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                .logo-icon {
+                    width: 32em;
+                }
+            }
+        }
+        .navbar-right {
+            display: flex;
+            border: $borderred;
+            width: 40%;
+
+            .language-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .language-icon {
+                    width: 12em;
+                }
+                .language-text {
+                    font-size: 20px;
+                    color: #f9fbfb;
+                    font-weight: bold;
+                }
+            }
+            .twitter-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .twitter-icon {
+                    width: 12em;
+                }
+            }
+            .facebook-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .facebook-icon {
+                    width: 12em;
+                }
+            }
+            .telegram-box {
+                border: $borderred;
+                width: 10%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .telegram-icon {
+                    width: 12em;
+                }
+            }
+            .login-box {
+                border: $borderred;
+                width: 30%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .login-text {
+                    font-size: 20px;
+                    color: #f9fbfb;
+                    font-weight: bold;
+                }
+            }
+            .register-box {
+                border: $borderred;
+                width: 30%;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                .register-text {
+                    font-size: 20px;
+                    color: #f9fbfb;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .content {
+        display: flex;
+        border: $borderred;
+        height: 100%;
+        width: 100%;
+        padding: 0 75px;
+        .halfleft-box {
+            border: $borderred;
+            width: 50%;
+            .info-box {
+                border: $borderred;
+                margin: 80px;
+                align-items: center;
+                justify-content: center;
+                .info-icon {
+                    width: 6em;
+                }
+            }
+            .download-box {
+                border: $borderred;
+                margin-left: 81px;
+                align-items: center;
+                justify-content: center;
+                .download-icon {
+                    width: 18em;
+                }
+            }
+        }
+        .halfright-box {
+            //display: flex;
+            border: $borderred;
+            width: 50%;
+            align-items: center;
+            justify-content: flex-end;
+            margin-left: 200px;
+            margin-top: 80px;
+            .phone-icon {
+                width: 25em;
+            }
+        }
+    }
+    .popup {
+        border: $borderred;
+        height: 50%;
+        width: 40%;
+        justify-content: center;
+        background-color: #180f2a;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 60px;
+        .logo-box {
+            border: $borderred;
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .logo-pic {
+                border: $borderred;
+                justify-content: center;
+                margin-top: 25px;
+                .logo-icon {
+                    width: 23em;
+                }
+            }
+        }
+        .username-box {
+            border: $borderred;
+            height: 10%;
+            width: 100%;
+            display: flex;
+            .username-form {
+                width: 85%;
+                height: 85%;
+                background-color: #ffffff;
+                margin-left: 40px;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                .username-text {
+                    font-size: 20px;
+                    color: #7d7d7d;
+                }
+            }
+        }
+        .password-box {
+            border: $borderred;
+            height: 10%;
+            width: 100%;
+            display: flex;
+            .password-form {
+                width: 85%;
+                height: 85%;
+                background-color: #ffffff;
+                margin-left: 40px;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                .password-text {
+                    font-size: 20px;
+                    color: #7d7d7d;
+                }
+            }
+        }
+        .signup-box {
+            border: $borderred;
+            height: 30%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .signup-btn {
+                width: 40%;
+                height: 40%;
+                margin-top: 30px;
+                justify-content: center;
+                background-color: #22abb1;
+                .signup-text {
+                    font-size: 20px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
