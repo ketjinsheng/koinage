@@ -1,0 +1,21 @@
+$borderred: 1px solid red;
+
+.container-wallet-sendwithdraw {
+  height: 100%;
+  width: calc(100% - 2px);
+  border: $borderred;
+  display: flex;
+  flex-direction: column;
+  .main {
+    border: $borderred;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .sendwithdrawal{
+      width: 75%;
+
+    }
+
+  }
+    
+}

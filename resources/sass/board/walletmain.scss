@@ -1,0 +1,35 @@
+$borderred: 1px solid red;
+
+.container-walletmain {
+  height: 100%;
+  width: calc(100% - 2px);
+  border: $borderred;
+  display: flex;
+  flex-direction: column;
+  .main {
+    border: $borderred;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .wallet{
+      width: 75%;
+      .balance{
+        border: $borderred;
+        
+        .balance-text{
+          font-size: 32px;
+          display: flex;
+          justify-content: center;
+        }        
+      }
+
+      .table{
+        align-content: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+  }
+    
+}

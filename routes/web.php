@@ -2,20 +2,23 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::livewire('home1', 'board.home');
+Route::livewire('home2', 'board.home2');
+Route::livewire('/dashboard','board.dashboard')->name('dashboard');
+Route::livewire('/walletmain', 'board.walletmain')->name('walletmain');
+Route::livewire('/wallet-market', 'board.wallet-market')->name('wallet-market');
+Route::livewire('/wallet-receivedeposit', 'board.wallet-receivedeposit')->name('wallet-receivedeposit');
+Route::livewire('/wallet-sendwithdraw', 'board.wallet-sendwithdraw')->name('wallet-sendwithdraw');
+Route::livewire('/wallet-buyonline', 'board.wallet-buyonline')->name('wallet-buyonline');
+Route::livewire('/wallet-buycard', 'board.wallet-buycard')->name('wallet-buycard');
+Route::livewire('/accountmain, board.accountmain')->name('accountmain');
+Route::livewire('/history', 'board.history')->name('history');
+Route::livewire('/logout', 'board.logout')->name('logout');
+
 
 Auth::routes();
 
