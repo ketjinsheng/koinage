@@ -1,4 +1,26 @@
-<div class="container-home">
+<div class="container-home2">
+    <div class="popup">
+        <div class="logo-box">
+            <div class="logo-pic">
+                <div><img class="logo-icon" src="{{URL::asset('/image/export/logo2.png')}}" alt="logo"></div>
+            </div>
+        </div>
+        <div class="username-box">
+            <div class="username-form">
+                <div class="username-text">Username </div>
+            </div>
+        </div>
+        <div class="password-box">
+            <div class="password-form">
+                <div class="password-text">Password </div>
+            </div>
+        </div>
+        <div class="signup-box">
+            <div class="signup-btn">
+                <div class="signup-text">Sign Up </div>
+            </div>>
+        </div>
+    </div>
     <div class="navbar">
         <div class="navbar-left">
             <div class="logo-box">
@@ -6,26 +28,6 @@
             </div>
         </div>
         <div class="navbar-right">
-<<<<<<< HEAD
-            <div class="symbol-box">
-                <div class="language-box">
-                    <div><img class="language-icon" src="{{URL::asset('/image/export/language-icon.png')}}" alt="Language"></div>
-                </div>
-                <div class="twitter-box">
-                    <div><img class="twitter-icon" src="{{URL::asset('/image/export/twitter-icon.png')}}" alt="Twitter"></div>
-                </div>
-                <div class="fb-box">
-                    <div><img class="fb-icon" src="{{URL::asset('/image/export/fb-icon.png')}}" alt="Facebook"></div>
-                </div>
-                <div class="telegram-box">
-                    <div><img class="plane-icon" src="{{URL::asset('/image/export/telegram-icon.png')}}" alt="Telegram"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content-half"></div>
-</div>
-=======
             <div class="language-box">
                 <div class="language-text">En</div>
             </div>
@@ -43,7 +45,7 @@
             </div>
             <div class="register-box">
                 <div class="register-text">Register</div>
-            </div>                                                            
+            </div>
         </div>
     </div>
     <div class="content">
@@ -53,12 +55,10 @@
             </div>
             <div class="download-box">
                 <div><img class="download-icon" src="{{URL::asset('/image/export/download.png')}}" alt="logo"></div>
-            </div>                        
-        </div> 
+            </div>
+        </div>
         <div class="halfright-box">
             <div><img class="phone-icon" src="{{URL::asset('/image/export/phone.png')}}" alt="logo"></div>
         </div>
     </div>
 </div>
-
->>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367

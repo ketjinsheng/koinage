@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+<<<<<<< HEAD
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+=======
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::livewire('home1', 'board.home');
+Route::livewire('home2', 'board.home2');
+Route::livewire('/dashboard','board.dashboard')->name('dashboard');
+Route::livewire('/walletmain', 'board.walletmain')->name('walletmain');
+Route::livewire('/wallet-market', 'board.wallet-market')->name('wallet-market');
+Route::livewire('/wallet-receivedeposit', 'board.wallet-receivedeposit')->name('wallet-receivedeposit');
+Route::livewire('/wallet-sendwithdraw', 'board.wallet-sendwithdraw')->name('wallet-sendwithdraw');
+Route::livewire('/wallet-buyonline', 'board.wallet-buyonline')->name('wallet-buyonline');
+Route::livewire('/wallet-buycard', 'board.wallet-buycard')->name('wallet-buycard');
+Route::livewire('/accountmain, board.accountmain')->name('accountmain');
+Route::livewire('/history', 'board.history')->name('history');
+Route::livewire('/logout', 'board.logout')->name('logout');
+
+>>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367
 
 // Auth::routes();
 <<<<<<< HEAD

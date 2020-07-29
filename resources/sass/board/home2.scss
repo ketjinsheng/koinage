@@ -1,33 +1,20 @@
-<<<<<<< HEAD
-$borderred: 1px solid red;
-
-.container-home {
-    background-image: url("/image/export/bgImage.png");
-    height: 100%;
-    // width: calc(100% - 2px);
-    width: 100%;
-=======
 $borderred: 0px solid red;
 
-.container-home {
+.container-home2 {
     background-image: url("/image/export/backgroundhome.png");
     height: 100%;
     width: calc(100% - 2px);
->>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367
     border: $borderred;
     display: flex;
     flex-direction: column;
+    position: relative;
     .navbar {
         border: $borderred;
         width: 100%;
         height: 15%;
         display: flex;
         padding: 0 75px;
-<<<<<<< HEAD
-        border-bottom: 1px solid #FFFFFF;
-=======
         border-bottom: 1px solid #ffffff;
->>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367
         .navbar-left {
             display: flex;
             border: $borderred;
@@ -37,77 +24,6 @@ $borderred: 0px solid red;
                 width: 60%;
                 display: flex;
                 align-items: center;
-<<<<<<< HEAD
-                justify-content: center;
-                .logo-icon {
-                    width: 24em;
-                }
-            }
-        }
-            .navbar-right {
-                border: $borderred;
-                width: 40%;
-                display: flex;
-                flex-direction: column;
-                .symbol-box{
-                    display: flex;
-                    height: 100%;
-
-                    .language-box {
-                        border: $borderred;
-                        height: 100%;
-                        width: 15%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        .language-icon {
-                            width: 3.5em;
-                        }
-                    }
-                    .twitter-box {
-                        border: $borderred;
-                        height: 100%;
-                        width: 10%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        .twitter-icon {
-                            width: 2.4em;
-                        }
-                    }
-                    .fb-box {
-                        border: $borderred;
-                        height: 100%;
-                        width: 10%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        .fb-icon {
-                            width: 1.2em;
-                        }
-                    }
-                    .telegram-box {
-                        border: $borderred;
-                        height: 100%;
-                        width: 10%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        .telegram-icon {
-                            width: 2.4em;
-                        }
-                    }
-                
-                }
-            }
-        }
-    .content-half {
-        border: $borderred;
-        height: 100%;
-        width: 50%;
-    }
-}
-=======
                 justify-content: flex-end;
                 .logo-icon {
                     width: 32em;
@@ -231,5 +147,92 @@ $borderred: 0px solid red;
             }
         }
     }
+    .popup {
+        border: $borderred;
+        height: 50%;
+        width: 40%;
+        justify-content: center;
+        background-color: #180f2a;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 60px;
+        .logo-box {
+            border: $borderred;
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .logo-pic {
+                border: $borderred;
+                justify-content: center;
+                margin-top: 25px;
+                .logo-icon {
+                    width: 23em;
+                }
+            }
+        }
+        .username-box {
+            border: $borderred;
+            height: 10%;
+            width: 100%;
+            display: flex;
+            .username-form {
+                width: 85%;
+                height: 85%;
+                background-color: #ffffff;
+                margin-left: 40px;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                .username-text {
+                    font-size: 20px;
+                    color: #7d7d7d;
+                }
+            }
+        }
+        .password-box {
+            border: $borderred;
+            height: 10%;
+            width: 100%;
+            display: flex;
+            .password-form {
+                width: 85%;
+                height: 85%;
+                background-color: #ffffff;
+                margin-left: 40px;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                .password-text {
+                    font-size: 20px;
+                    color: #7d7d7d;
+                }
+            }
+        }
+        .signup-box {
+            border: $borderred;
+            height: 30%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .signup-btn {
+                width: 40%;
+                height: 40%;
+                margin-top: 30px;
+                justify-content: center;
+                background-color: #22abb1;
+                .signup-text {
+                    font-size: 20px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
->>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367

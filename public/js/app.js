@@ -37341,8 +37341,13 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! /Users/mac/Desktop/koinage/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/mac/Desktop/koinage/resources/sass/app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Users\User PC\Desktop\project\koinage-livewire\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\User PC\Desktop\project\koinage-livewire\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> ecab934340c3f9d160e4dcda20d764461a67e367
 
 
 /***/ })

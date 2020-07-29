@@ -1,0 +1,10 @@
+$borderred: 1px solid red;
+
+.container-dashboard {
+  height: 100%;
+  width: calc(100% - 2px);
+  border: $borderred;
+  display: flex;
+  flex-direction: column;
+    
+}
