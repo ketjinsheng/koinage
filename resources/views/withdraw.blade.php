@@ -61,6 +61,7 @@
                     <input type="hidden" id="addnetwork_id" name="network_id">
                     <input type="hidden" id="to_address" name="to_address">
                     <input type="hidden" id="from_address" name="from_address" value="{{$address}}">
+                    <input type="hidden" id="coin_id" name="coin_id" value="{{$coin_id}}">
                     <div class="form-group row text-center">
                         <label for="tradingpin" class="col-4 control-label col-form-label">{{__('Trading Pin')}}</label>
                         <div class="col-8">
@@ -107,10 +108,11 @@ complete : function(value, e, errorElement){
 });
 
 $('#withdrawTradingPin').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
+    var button = $(event.relatedTarget);
         var amount = document.getElementById('amount').value;
         var network_id = document.getElementById('addnetwork_id').value;
         var to_address =  document.getElementById('to_address').value;
+        var coin_id =  document.getElementById('coin_id').value;
         console.log(amount,network_id,to_address);
 
         var modal = $(this);
@@ -118,6 +120,7 @@ $('#withdrawTradingPin').on('show.bs.modal', function (event) {
         modal.find('.modal-body #amount').val(amount);
         modal.find('.modal-body #addnetwork_id').val(network_id);
         modal.find('.modal-body #to_address').val(to_address);
+        modal.find('.modal-body #coin_id').val(coin_id);
     })
 </script>
 @endsection

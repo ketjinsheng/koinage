@@ -70,55 +70,52 @@ class AddressController extends Controller
             if ($coin->network_id == $request->network_id && $coin->symbol == $symbol)
                 $coin_id = $coin->id;
         }
-        $client = new \GuzzleHttp\Client();
-        $header = [
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiZGV3d2VuQGdtYWlsIiwiaXAiOiIwLjAuMC4wIiwiaWF0IjoxNTk1NDc0MDk0fQ.1EtSF8TraID2fIC90jRbBnQZ6i5lg0ddgaFGa02q6N0',
-            'email' => $user_email
-        ];
-
-        $body = [
-            "network" => $symbol,
-            "api_key" => $api_key,
-            "request_id" => $request_id,
-            "from_addresses" => $request->from_address,
-            "to_addresses" => $request->to_address,
-            "amounts" => $request->amount
-        ];
-
-        try {
-            $res = $client->request('POST', 'https://stageapi.koinage.cc/eth/withdraw', [
-                'json' => $body,
-                'headers' => $header,
-            ]);
-        } catch (\Exception $e) {
-            alert()->error('Your Api Key is not valid');
-            return back();
+        if ($symbol == "BTC") {
+            $symbol = "OMNI";
         }
-        
-        $response = json_decode($res->getBody(),true);
+        if ($symbol == "ETH" || $symbol == "EOS" || $symbol == "BNB" || $symbol == "NEO" || $symbol == "ONT" || $symbol == "XRP") {
+            $client = new \GuzzleHttp\Client();
+            $params = [
+                "network" => $symbol,
+                "label" => $username
+            ];
 
-        if ($request->pin == $trading_pin) {
-            $withdraw = new Withdraw;
-            $withdraw->request_id = $request_id;
-            $withdraw->from_address = $request->from_address;
-            $withdraw->to_address = $request->to_address;
-            $withdraw->coin_id = $request->coin_id;
-            $withdraw->amount = $request->amount;
+            try {
+                $res = $client->request('GET', 'https://stageapi2.koinage.cc/api/v1/wallet/CreateApiKey', [
+                    'form_params' => $params
+                ]);
+            } catch (\Exception $e) {
+                alert()->error('Your Api Key is not valid');
+                return back();
+            }
             
-            $this->toAddress =  $withdraw->to_address;
-            if ($response['status'] == 'failed') {
-                alert()->error('You have insufficient fund or gas')->persistent('close');
+            $response = json_decode($res->getBody(),true);
+
+            if ($request->pin == $trading_pin) {
+                $withdraw = new Withdraw;
+                $withdraw->request_id = $request_id;
+                $withdraw->from_address = $request->from_address;
+                $withdraw->to_address = $request->to_address;
+                $withdraw->coin_id = $request->coin_id;
+                $withdraw->amount = $request->amount;
+                
+                $this->toAddress =  $withdraw->to_address;
+                if ($response['status'] == 'failed') {
+                    alert()->error('You have insufficient fund or gas')->persistent('close');
+                    return back();
+                } else {
+                    $withdraw->tx_id = $response['txid'];
+                    $withdraw->status = $response['status'];
+                    $withdraw->save();
+                    alert()->success('Withdraw is pending')->persistent('close');
+                    return back();
+                }    
+            } elseif ($request->pin != $trading_pin) {
+                alert()->error('The trading pin does not match')->persistent('close');
                 return back();
-            } else {
-                $withdraw->tx_id = $response['txid'];
-                $withdraw->status = $response['status'];
-                $withdraw->save();
-                alert()->success('Withdraw is pending')->persistent('close');
-                return back();
-            }    
-        } elseif ($request->pin != $trading_pin) {
-            alert()->error('The trading pin does not match')->persistent('close');
-            return back();
+            }
+        } else {
+            $client = new \GuzzleHttp\Client();
         }
     }
 
