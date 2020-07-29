@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // Fonts
 // @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -35,3 +36,25 @@ div {
 @import "board/msell";
 @import "board/setting";
 @import "board/login";
+=======
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: unset;
+    font-size: 12px;
+}
+
+@import "board/home";
+@import "board/signup";
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43

@@ -2,6 +2,7 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
   height: 100%;
+<<<<<<< HEAD
   padding: -20px;
   background-image: #efefef;
 }
@@ -500,10 +501,38 @@ div {
 
 .container-home2 .navbar {
   border: 0px solid red;
+=======
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: unset;
+  font-size: 12px;
+}
+
+.container-home {
+  background-image: url("/image/export/bgImage.png");
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-home .navbar {
+  border: 1px solid red;
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43
   width: 100%;
   height: 15%;
   display: flex;
   padding: 0 75px;
+<<<<<<< HEAD
   border-bottom: 1px solid #ffffff;
 }
 
@@ -760,5 +789,96 @@ div {
   justify-content: center;
   align-items: center;
   height: 100%;
+=======
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.container-home .navbar .navbar-left {
+  display: flex;
+  border: 1px solid red;
+  width: 60%;
+}
+
+.container-home .navbar .navbar-left .logo-box {
+  border: 1px solid red;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-home .navbar .navbar-left .logo-box .logo-icon {
+  width: 24em;
+}
+
+.container-home .navbar .navbar-right {
+  border: 1px solid red;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-home .navbar .navbar-right .symbol-box {
+  display: flex;
+  height: 100%;
+}
+
+.container-home .navbar .navbar-right .symbol-box .language-box {
+  border: 1px solid red;
+  height: 100%;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-home .navbar .navbar-right .symbol-box .language-box .language-icon {
+  width: 3.5em;
+}
+
+.container-home .navbar .navbar-right .symbol-box .twitter-box {
+  border: 1px solid red;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-home .navbar .navbar-right .symbol-box .twitter-box .twitter-icon {
+  width: 2.4em;
+}
+
+.container-home .navbar .navbar-right .symbol-box .fb-box {
+  border: 1px solid red;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-home .navbar .navbar-right .symbol-box .fb-box .fb-icon {
+  width: 1.2em;
+}
+
+.container-home .navbar .navbar-right .symbol-box .telegram-box {
+  border: 1px solid red;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-home .navbar .navbar-right .symbol-box .telegram-box .telegram-icon {
+  width: 2.4em;
+}
+
+.container-home .content-half {
+  border: 1px solid red;
+  height: 100%;
+  width: 50%;
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43
 }
 

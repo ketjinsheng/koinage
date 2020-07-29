@@ -11,8 +11,12 @@
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
+<<<<<<< HEAD
         "fzaninotto/faker": "^1.9",
         "guzzlehttp/guzzle": "^6.3",
+=======
+        "guzzlehttp/guzzle": "^7.0",
+>>>>>>> af11d820f69ade30ceb032b413423d5a16959e43
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
