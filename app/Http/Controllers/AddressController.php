@@ -7,6 +7,7 @@ use App\Address;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\Address as AddressResource;
 
 class AddressController extends Controller
@@ -57,7 +58,30 @@ class AddressController extends Controller
         return view('withdraw_history')->with('coin_id',$coin_id);
     }
 
-    public function receive() {
-        return view('qrcode');
+    public function receive(Request $request) {
+        $coin_id = $request->coin_id;
+        return view('qrcode')->with('coin_id',$coin_id);
+    }
+
+    public function create_address() {
+        $client = new \GuzzleHttp\Client();
+        $header = [
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiZGV3d2VuQGdtYWlsIiwiaXAiOiIwLjAuMC4wIiwiaWF0IjoxNTk1NDc0MDk0fQ.1EtSF8TraID2fIC90jRbBnQZ6i5lg0ddgaFGa02q6N0'
+        ];
+
+        $body = [
+            "type" => "ETH",
+            "walletId" => "PI0DpcXKLuRZUkiHpQ5qeecIS7Nfc1iDvMcRAAkK96z9DDy18AT8AYiPtaguTdhwwSDNLEWofqWnShDu+fXfMe2cCk2T8qy/TX05eDXqjwbrmtrgBFNo5Y+fWxWUpudL",
+            "email" => "dewwen@gmail",
+            "index" => "1"
+        ];
+
+        $res = $client->request('POST', 'https://stageapi.koinage.cc/eth/createAddress', [
+            'json' => $body,
+            'headers' => $header,
+        ]);
+        
+        $response = json_decode($res->getBody(),true);
+        dd($response);
     }
 }
